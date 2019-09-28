@@ -31,6 +31,7 @@ DEPENDENCIES_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webpack_loader'
 ]
 
 PROJECT_APPS = [
@@ -102,9 +103,25 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'assets'),  # Webpack assets
+)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# Webpack config
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': IS_PRODUCTION,
+        'BUNDLE_DIR_NAME': 'webpack_bundles/',  # must end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+        'POLL_INTERVAL': 0.1,
+        'TIMEOUT': None,
+        'IGNORE': [r'.+\.hot-update.js', r'.+\.map']
+    }
+}
 
 # Email Config
 EMAIL_SUBJECT_PREFIX = '[project_name] '

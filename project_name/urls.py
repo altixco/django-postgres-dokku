@@ -18,6 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     # Uncomment to add main app urls to root page
-    # path('', include('main.urls')),
+    path('', include('main.urls')),
     path('admin/', admin.site.urls),
 ]

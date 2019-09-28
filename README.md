@@ -12,7 +12,6 @@ Django 2.2 + Postgres 11 + Dokku config (Production Ready)
 │   │   ├── dev.json (Useful dev fixtures, bu default creates and admin user with password admin)
 │   │   └── initial.json (Initial fixture loaded on each startup of the project)
 │   ├── migrations
-│   ├── static (Add here the main statics of the app)
 │   ├── templates (Ahh here the main templates of the app)
 │   ├── admin.py
 │   ├── apps.py
@@ -20,6 +19,7 @@ Django 2.2 + Postgres 11 + Dokku config (Production Ready)
 │   ├── tests.py (We hope you put some test here :D)
 │   ├── urls.py (Main urls, place the home page here)
 │   └── views.py
+├── assets (js, stylesheets, etc to create bundle using webpack)
 ├── media
 ├── project_name
 │   ├── settings
