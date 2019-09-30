@@ -1,21 +1,36 @@
 const path = require('path');
-const webpack = require('webpack');
 const BundleTracker = require('webpack-bundle-tracker');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   context: __dirname,
   mode: "production",
-  entry: './assets/js/index',
+
+  entry: {
+    app: './assets/js/app',
+    vendor: './assets/js/vendor'
+  },
+
   output: {
-      path: path.resolve('./assets/webpack_bundles/'),
-      filename: "[name].js"
+    path: path.resolve('./assets/webpack_bundles/'),
+    filename: '[name].js',
+    chunkFilename: '[name].js'
+  },
+
+  optimization: {
+    // Extract common imports between dependencies and app bundles into a modules.js file
+    splitChunks: {
+      chunks: 'all',
+      name: 'modules',
+    },
   },
 
   plugins: [
-    new BundleTracker({filename: './webpack-stats.json'}),
+    new BundleTracker({
+      filename: './webpack-stats.json'
+    }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].css'
     })
   ],
 

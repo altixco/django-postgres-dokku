@@ -1,1 +1,10 @@
-@import "~bootstrap";
+// Bootstrap and other libraries should be imported in vendor.scss in order to create a different chunk for caching purposes
+// If we import bootstrap here as well we would have duplicated css increasing the page loading time,
+// however, the variables scss is shared between the app and the libraries, therefore, you can use it to override variables like:
+// bootstrap $primary, $secondary, $grid-gutter-width, etc.
+@import "variables";
+
+body {
+  background: lightblue;
+  transform: rotate(5deg);
+}

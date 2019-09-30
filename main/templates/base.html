@@ -4,10 +4,15 @@
   <head>
     <meta charset="UTF-8">
     <title>Example</title>
+    {% render_bundle 'modules' %}
+    {% render_bundle 'vendor' 'css' %}
+    {% render_bundle 'app' 'css' %}
   </head>
 
   <body>
     <h1>Webpack rocks</h1>
-    {% render_bundle 'main' %}
+    <a href="#" class="btn btn-primary">Button primary</a>
+    {% render_bundle 'vendor' 'js' %}
+    {% render_bundle 'app' 'js' %}
   </body>
 </html>
