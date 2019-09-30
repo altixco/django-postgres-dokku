@@ -51,10 +51,12 @@ module.exports = {
           },
           // Translates CSS into CommonJS to resolve css imports
           'css-loader',
+          // Make CSS work with old browsers
+          'postcss-loader',
           // Compiles Sass to CSS
           'sass-loader',
         ],
       },
     ],
   },
-};
+}
