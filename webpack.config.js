@@ -37,6 +37,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           // Extract css into its own file
