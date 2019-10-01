@@ -10,5 +10,16 @@
 
 body {
   background: $success;
-  color: lightgray;
+  color: black;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/logo.png");
+  background-size: 400px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+html {
+  width: 100%;
+  height: 100%;
 }
