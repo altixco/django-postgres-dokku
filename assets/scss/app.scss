@@ -4,6 +4,11 @@
 // bootstrap $primary, $secondary, $grid-gutter-width, etc.
 @import "variables";
 
+// Imports required to use bootstrap variables that are not overridden by _variables.scss
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
 body {
-  background: lightblue;
+  background: $success;
+  color: lightgray;
 }

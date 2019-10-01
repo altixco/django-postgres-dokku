@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   context: __dirname,
   mode: "production",
+  devtool: "source-map",
 
   entry: {
     app: './assets/js/app',
@@ -50,18 +51,30 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              // only enable hot reloading in development
-              hmr: true,
-              // if hmr does not work, this is a forceful method.
-              reloadAll: true,
-            },
+              sourceMap: true
+            }
           },
           // Translates CSS into CommonJS to resolve css imports
-          'css-loader',
-          // Make CSS work with old browsers
-          'postcss-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          // Make modern CSS work with old browsers
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true
+            }
+          },
           // Compiles Sass to CSS
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
         ],
       },
     ],
