@@ -24,4 +24,4 @@ src/static/
 !src/static/.keep
 
 assets/webpack_bundles
-webpack-stats.json
+webpack-*-stats.json
