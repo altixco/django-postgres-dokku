@@ -18,8 +18,8 @@ build/
 tests/report/
 env/
 
-src/media/
+media/
 src/static/
 
-!src/media/.keep
-!src/static/.keep
+!media/.keep
+!static/.keep
