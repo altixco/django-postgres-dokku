@@ -31,16 +31,21 @@ DEPENDENCIES_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Pick the Addons you want
-    # 'webpack_loader',
-    # 'rest_framework',
 ]
 
 PROJECT_APPS = [
     'main',
 ]
 
-INSTALLED_APPS = DEPENDENCIES_APPS + PROJECT_APPS
+ADDONS = [
+    # Pick the Addons you want
+    # To use Webpack, uncomment next line
+    'webpack_loader',
+    # To use Rest Framework uncomment next line
+    # 'rest_framework',
+]
+
+INSTALLED_APPS = DEPENDENCIES_APPS + PROJECT_APPS + ADDONS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
