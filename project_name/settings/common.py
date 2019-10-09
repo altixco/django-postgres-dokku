@@ -32,7 +32,7 @@ DEPENDENCIES_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Pick the Addons you want
-    # 'webpack_loader',
+    'webpack_loader',
     # 'rest_framework',
 ]
 
