@@ -31,9 +31,6 @@ DEPENDENCIES_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Pick the Addons you want
-    'webpack_loader',
-    # 'rest_framework'
 ]
 
 PROJECT_APPS = [
