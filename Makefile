@@ -29,7 +29,7 @@ statics:
 	docker exec -it project_name ./manage.py collectstatic --noinput
 
 makemessages:
-	docker exec -it signtix django-admin makemessages
+	docker exec -it project_name django-admin makemessages
 
 compilemessages:
-	docker exec -it signtix django-admin compilemessages
+	docker exec -it project_name django-admin compilemessages
