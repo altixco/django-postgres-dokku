@@ -19,7 +19,7 @@ tests/report/
 env/
 
 media/
-src/static/
+static/
 
 !media/.keep
 !static/.keep
