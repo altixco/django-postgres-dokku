@@ -42,7 +42,7 @@ ADDONS = [
     # To use Webpack, uncomment next line
     # 'webpack_loader',
     # To use Rest Framework uncomment next line
-    # 'rest_framework',
+    'rest_framework',
 ]
 
 INSTALLED_APPS = DEPENDENCIES_APPS + PROJECT_APPS + ADDONS
