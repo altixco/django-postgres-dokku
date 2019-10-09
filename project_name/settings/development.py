@@ -43,3 +43,8 @@ else:
             'PORT': 5432,
         }
     }
+
+WEBPACK_LOADER.update({
+    'BUNDLE_DIR_NAME': 'webpack_bundles/',  # must end with slash
+    'STATS_FILE': os.path.join(BASE_DIR, 'webpack-development-stats.json'),
+})

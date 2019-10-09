@@ -29,6 +29,12 @@ else:
         }
     }
 
+
+WEBPACK_LOADER.update({
+    'BUNDLE_DIR_NAME': 'dist/',  # must end with slash
+    'STATS_FILE': os.path.join(BASE_DIR, 'webpack-production-stats.json'),
+})
+
 # Email Config
 """
 EMAIL_PASSWORD = get_secret('EMAIL_PASSWORD')
