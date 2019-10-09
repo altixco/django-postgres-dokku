@@ -1,11 +1,9 @@
 const path = require('path');
 const BundleTracker = require('webpack-bundle-tracker');
 
-let config = require('./webpack.base.config');
+const config = require('./webpack.base.config');
 
 config.mode = 'development';
-
-config.output.path = path.resolve('./assets/webpack_bundles/');
 
 config.plugins.push(
   new BundleTracker({
@@ -14,7 +12,6 @@ config.plugins.push(
 );
 
 config.devServer = {
-  inline: true,
   port: 9000,
   headers: {
     "Access-Control-Allow-Origin": "*",
@@ -23,6 +20,7 @@ config.devServer = {
   },
 };
 
+config.output.path = path.resolve('./assets/webpack_bundles/');
 //override django's STATIC_URL for webpack bundles
 config.output.publicPath = 'http://localhost:9000/static/';
 

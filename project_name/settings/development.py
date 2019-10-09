@@ -44,7 +44,7 @@ else:
         }
     }
 
-WEBPACK_LOADER.update({
+WEBPACK_LOADER['DEFAULT'].update({
     'BUNDLE_DIR_NAME': 'webpack_bundles/',  # must end with slash
     'STATS_FILE': os.path.join(BASE_DIR, 'webpack-development-stats.json'),
 })
