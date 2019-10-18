@@ -1,3 +1,7 @@
 from django.contrib import admin
+from main.models import Configuration
 
-# Register your models here.
+
+@admin.register(Configuration)
+class ConfigurationAdmin(admin.ModelAdmin):
+    list_display = ["key", "value"]

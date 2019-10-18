@@ -15,9 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from main.urls import apiurls as main_apiurls
+
+
+# Create the API namespace and add the API only URLs of the applications
+apiurls = ([
+    path('main/', include(main_apiurls, namespace='main')),
+], 'api')
 
 urlpatterns = [
     # Uncomment to add main app urls to root page
     # path('', include('main.urls')),
+    path('api/', include(apiurls, namespace='api')),
     path('admin/', admin.site.urls),
 ]
