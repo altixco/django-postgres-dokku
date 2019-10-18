@@ -54,8 +54,8 @@ cd project_name
 
 Merge the addons required by your project (Optional):
 ```
-git merge rest
-git merge webpack
+git merge origin/rest
+git merge origin/webpack
 ```
 
 Rename your project files and directorys:
