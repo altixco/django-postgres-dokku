@@ -18,7 +18,7 @@ from django.urls import path, include
 from main.urls import apiurls as main_apiurls
 
 
-# Create the namespace for each application and add the urls of each of them
+# Create the API namespace and add the API only URLs of the applications
 apiurls = ([
     path('main/', include(main_apiurls, namespace='main')),
 ], 'api')
