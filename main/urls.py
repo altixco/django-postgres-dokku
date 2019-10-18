@@ -5,7 +5,7 @@ from main.api import ConfigurationView
 from rest_framework import routers
 
 api_router = routers.DefaultRouter()
-# /api/main/configuration
+# /api/main/configurations
 api_router.register('configurations', ConfigurationView)
 
 apiurls = ([
