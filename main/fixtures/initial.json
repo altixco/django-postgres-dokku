@@ -1,3 +1,10 @@
 [
-
+  {
+    "model": "main.Configuration",
+    "pk": 1,
+    "fields": {
+      "key": "APP_NAME",
+      "value": "project_name"
+    }
+  }
 ]
