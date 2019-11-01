@@ -16,6 +16,7 @@ services:
     command: ["/scripts/wait-for-it.sh", "db:5432", "--", "/scripts/command-dev.sh"]
     ports:
       - "8000:8000"
+      - "9000:9000"
 
   db:
     image: postgres:11

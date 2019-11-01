@@ -5,13 +5,13 @@ init:
 	mv ./project_name ./$(name)
 
 webpack-dev:
-	docker exec -it signtix-apps npm run dev
+	docker exec -it project_name npm run dev
 
 webpack-dev-server:
-	docker exec -it signtix-apps npm run dev-server
+	docker exec -it project_name npm run dev-server
 
 webpack-build:
-	docker exec -it signtix-apps npm run build
+	docker exec -it project_name npm run build
 
 superuser:
 	docker exec -it project_name ./manage.py createsuperuser
