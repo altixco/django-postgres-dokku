@@ -74,7 +74,7 @@ git remote add origin <repository-url>
 
 ### How to run the project ###
 
-The project use docker, so just run:
+The project uses docker, so just run:
 
 ```
 docker-compose up
@@ -94,6 +94,19 @@ To remove the docker containers including database (Useful sometimes when dealin
 
 ```
 docker-compose down
+```
+
+Generate the bundles as corresponding:
+```
+make webpack-dev
+```
+or
+```
+make webpack-dev-server
+```
+or
+```
+make webpack-build
 ```
 
 ## Production Deployment: ##

@@ -4,6 +4,15 @@ init:
 	find ./ -type f -exec perl -pi -e 's/project_name/$(name)/g' *.* {} \;
 	mv ./project_name ./$(name)
 
+webpack-dev:
+	docker exec -it signtix-apps npm run dev
+
+webpack-dev-server:
+	docker exec -it signtix-apps npm run dev-server
+
+webpack-build:
+	docker exec -it signtix-apps npm run build
+
 superuser:
 	docker exec -it project_name ./manage.py createsuperuser
 
