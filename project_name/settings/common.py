@@ -45,7 +45,7 @@ ADDONS = [
     # 'rest_framework',
 ]
 
-INSTALLED_APPS = DEPENDENCIES_APPS + PROJECT_APPS + ADDONS
+INSTALLED_APPS = DEPENDENCIES_APPS + ADDONS + PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
