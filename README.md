@@ -9,7 +9,7 @@ Django 2.2 + Postgres 11 + Dokku config (Production Ready)
 
 ├── main (Main application of the project, use it to add main templates, statics and root routes)
 │   ├── fixtures
-│   │   ├── dev.json (Useful dev fixtures, bu default creates and admin user with password admin)
+│   │   ├── dev.json (Useful dev fixtures, by default it creates an `admin` user with password `admin`)
 │   │   └── initial.json (Initial fixture loaded on each startup of the project)
 │   ├── migrations
 │   ├── static (Add here the main statics of the app)
@@ -17,7 +17,7 @@ Django 2.2 + Postgres 11 + Dokku config (Production Ready)
 │   ├── admin.py
 │   ├── apps.py
 │   ├── models.py (Main models like City, Config)
-│   ├── tests.py (We hope you put some test here :D)
+│   ├── tests.py (We hope you put some tests here :D)
 │   ├── urls.py (Main urls, place the home page here)
 │   └── views.py
 ├── media
@@ -54,8 +54,8 @@ cd project_name
 
 Merge the addons required by your project (Optional):
 ```
-git merge rest
-git merge webpack
+git merge origin/rest
+git merge origin/webpack
 ```
 
 Rename your project files and directorys:
