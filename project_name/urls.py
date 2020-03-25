@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     # Uncomment to add main app urls to root page
-    path('', include('main.urls')),
+    # path('', include('main.urls')),
     path('admin/', admin.site.urls),
 ]
 
