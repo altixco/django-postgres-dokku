@@ -11,17 +11,13 @@ config.plugins.push(
   }),
 );
 
-config.devServer = {
-  port: 9000,
-  headers: {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-    "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
-  },
-};
-
 config.output.path = path.resolve('./assets/webpack_bundles/');
-//override django's STATIC_URL for webpack bundles
-config.output.publicPath = 'http://localhost:9000/static/';
+
+config.devServer = {
+  contentBase: false,
+  port: 9000,
+  host: '0.0.0.0',
+  writeToDisk: true
+};
 
 module.exports = config;

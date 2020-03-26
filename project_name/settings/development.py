@@ -6,7 +6,7 @@ SECRET_KEY = 'p3gm=o9o+_r(5*o$$kn#h*8#n1r)aquf^^nm_v5u0pn^qa$=4*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # CORS Config: install django-cors-headers and uncomment the following to allow CORS from any origin
 """
@@ -44,7 +44,12 @@ else:
         }
     }
 
+# Webpack config
 WEBPACK_LOADER['DEFAULT'].update({
     'BUNDLE_DIR_NAME': 'webpack_bundles/',  # must end with slash
     'STATS_FILE': os.path.join(BASE_DIR, 'webpack-development-stats.json'),
 })
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'assets')
+]
