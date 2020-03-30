@@ -8,6 +8,11 @@ DEBUG = False
 ALLOWED_HOSTS = ['.project_name.com']
 SECRET_KEY = get_secret('DJANGO_SECRET_KEY')
 
+PUSH_NOTIFICATIONS_SETTINGS = {
+    # Set your firebase production project 'Server key'
+    'FCM_API_KEY': 'firebase-production-server-key'
+}
+
 if get_secret('DATABASE_URL'):
     import dj_database_url
 

@@ -1,4 +1,5 @@
 Django==2.2.10
 gunicorn==19.9.0
+django-push-notifications==2.0.0
 psycopg2==2.8.3
 dj_database_url
