@@ -1,9 +1,9 @@
 from django.urls import path
 from django.urls import include
-
-from main.views import home
-from main.api import ConfigurationView
 from rest_framework import routers
+
+from main.api import ConfigurationView
+from main.views import home
 
 urlpatterns = [
     path('', home, name="home"),
