@@ -1,4 +1,5 @@
-from django.urls import path, include
+from django.urls import path
+from django.urls import include
 
 from main.views import home
 from main.api import ConfigurationView
