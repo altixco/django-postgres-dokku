@@ -9,11 +9,11 @@ api_router = routers.DefaultRouter()
 # /api/main/configurations
 api_router.register('configurations', ConfigurationView)
 
+urlpatterns = [
+    path('', home, name="home"),
+]
+
 apiurls = ([
     # /api/main/<routers>
     path('', include(api_router.urls))
 ], 'main')
-
-urlpatterns = [
-    path('', home, name="home"),
-]
