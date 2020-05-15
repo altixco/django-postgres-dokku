@@ -43,6 +43,8 @@ ADDONS = [
     # 'webpack_loader',
     # To use Rest Framework uncomment next line
     'rest_framework',
+    # To use Push Notifications uncomment next line
+    # 'push_notifications',
 ]
 
 INSTALLED_APPS = DEPENDENCIES_APPS + ADDONS + PROJECT_APPS
