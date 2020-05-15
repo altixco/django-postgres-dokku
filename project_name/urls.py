@@ -26,7 +26,7 @@ apiurls = ([
 ], 'api')
 
 urlpatterns = [
-    # Uncomment to add main app urls to root page	    path('', include('main.urls')),
+    # Uncomment to add main app urls to root page
     # path('', include('main.urls')),
     path('api/', include(apiurls, namespace='api')),
     path('admin/', admin.site.urls),
