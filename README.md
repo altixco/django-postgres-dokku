@@ -96,6 +96,17 @@ To remove the docker containers including database (Useful sometimes when dealin
 docker-compose down
 ```
 
+### Accessing Administration
+
+The django admin site of the project can be accessed at `localhost:8000/admin`
+
+By default the development configuration creates a superuser with the following credentials:
+
+```
+Username: admin
+Password: admin
+```
+
 ## Production Deployment: ##
 
 The project is dokku ready, this are the steps to deploy it in your dokku server:
