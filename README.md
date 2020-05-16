@@ -56,6 +56,7 @@ Merge the addons required by your project (Optional):
 ```
 git merge origin/rest
 git merge origin/webpack
+git merge origin/push-notifications
 ```
 
 Rename your project files and directorys:
