@@ -106,9 +106,8 @@ After the containers are running, the webpack bundle is required in order to ren
 make webpack-dev
 ```
 
-The previous command will generate the bundle for webpack and keep watching for changes in the files in order 
-to regenerate the bundle. However, if you want to take advantage of the live reload functionality you should 
-use the next command instead:
+The previous command will generate the bundle for webpack once. 
+However, if you want to take advantage of the live reload functionality you should use the next command instead:
 
 ```
 make webpack-dev-server
