@@ -13,10 +13,14 @@ services:
       - .:/src
       - ./scripts:/scripts
     # Dev user: admin pass: admin
-    command: ["/scripts/wait-for-it.sh", "db:5432", "--", "/scripts/command-dev.sh"]
+    # command: ["/scripts/wait-for-it.sh", "db:5432", "--", "/scripts/command-dev.sh"]
+    command: ["/bin/bash", "/scripts/command-dev.sh"]
+
     ports:
       - "8000:8000"
 
   db:
     image: postgres:11
     container_name: project_name-postgres
+    environment: 
+      POSTGRES_PASSWORD: postgres
