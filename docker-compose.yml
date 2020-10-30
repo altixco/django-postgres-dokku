@@ -21,3 +21,5 @@ services:
   db:
     image: postgres:11
     container_name: project_name-postgres
+    environment: 
+      POSTGRES_PASSWORD: postgres
