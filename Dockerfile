@@ -2,7 +2,7 @@ FROM python:3.7
 ENV PYTHONUNBUFFERED=1
 
 # For node
-RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get update
 
 # For localizations

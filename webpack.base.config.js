@@ -45,9 +45,6 @@ module.exports = {
           // Extract css into its own file
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              sourceMap: true
-            }
           },
           // Translates CSS into CommonJS to resolve css imports
           {
