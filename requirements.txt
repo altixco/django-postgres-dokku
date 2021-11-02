@@ -1,5 +1,5 @@
 Django==3.1.1
 gunicorn==19.9.0
 psycopg2==2.8.3
-django-webpack-loader
+django-webpack-loader==0.7.0
 dj_database_url
