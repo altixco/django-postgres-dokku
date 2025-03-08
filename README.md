@@ -33,6 +33,9 @@ Django 3.1.1 + Postgres 11 + Dokku config (Production Ready)
 ├── scripts
 │   ├── command-dev.sh (Commands executed after the development containers are ready)
 │   └── wait-for-it.sh (Dev script to wait for the database to be ready before starting the django app)
+├── .env enviroment variables (ogmpred bu git)
+├── .env.example Example environment file
+├── static
 ├── static
 ├── Dockerfile (Instructions to create the project image with docker)
 ├── Makefile (Useful commands)
@@ -41,7 +44,8 @@ Django 3.1.1 + Postgres 11 + Dokku config (Production Ready)
 ├── app.json (Dokku deployment configuration)
 ├── docker-compose.yml (Config to easily deploy the project in development with docker)
 ├── manage.py (Utility to run most django commands)
-└── requirements.txt (Python dependencies to be installed)
+├── requirementes.txt (Python dependencies to be installed)
+└── requirements-dev.txt (Python dev dependencies to be installed)
 ```
 
 ### How to install the template ###
@@ -74,6 +78,12 @@ git remote add origin <repository-url>
 ```
 
 ### How to run the project ###
+
+### ⚙️ Setup
+Before running the application, copy the environment file:
+```sh
+cp .env.example .env
+
 
 The project use docker, so just run:
 

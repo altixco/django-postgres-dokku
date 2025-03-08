@@ -28,6 +28,17 @@ CORS_ORIGIN_ALLOW_ALL = True
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# Debug Toolbar Configuration (Only for Development)
+if DEBUG_TOOLBAR:
+    INSTALLED_APPS += ["debug_toolbar"]
+    MIDDLEWARE += ["debug_toolbar.middleware.DebugToolbarMiddleware"]
+
+    # Ensure INTERNAL_IPS is set correctly
+    import socket
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS = [ip[: ip.rfind(".")] + ".1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
+
+
 # Configured with DATABASE_URL env, usually from dokku
 if os.environ.get('DATABASE_URL', ''):
     DATABASES = {
@@ -44,3 +55,9 @@ else:
             'PORT': 5432,
         }
     }
+
+# Local settings
+try:
+    from .temp import *
+except ImportError:
+    pass

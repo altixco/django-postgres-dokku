@@ -5,8 +5,10 @@
 .tox/
 .DS_Store
 .idea/
-.env/
+.env
+!.env.example
 *.mo
+temp.py
 
 __pycache__
 MANIFEST

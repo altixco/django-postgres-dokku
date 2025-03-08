@@ -2,11 +2,16 @@ version: '3.1'
 
 services:
   project_name:
-    build: .
+    build:
+      context: .
+      args:
+        ENVIRONMENT: ${ENVIRONMENT}  # Pass ENVIRONMENT to the build
     image: project_name:latest
     container_name: project_name
+    env_file:
+      - .env  # Load variables at runtime
     environment:
-      ENVIRONMENT: development
+      - ENVIRONMENT=${ENVIRONMENT}  # Also pass it at runtime
     depends_on:
       - db
     volumes:
@@ -18,7 +23,7 @@ services:
       - "8000:8000"
 
   db:
-    image: postgres:11
+    image: postgres:16
     container_name: project_name-postgres
     environment: 
       POSTGRES_PASSWORD: postgres
