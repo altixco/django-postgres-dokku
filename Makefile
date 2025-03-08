@@ -10,6 +10,9 @@ superuser:
 shell:
 	docker exec -it project_name ./manage.py shell
 
+enter:
+	docker exec -it project_name bash
+
 makemigrations:
 	docker exec -it project_name ./manage.py makemigrations
 
@@ -25,7 +28,7 @@ testfixture:
 test:
 	docker exec -it project_name ./manage.py test
 
-statics:
+collectstatic:
 	docker exec -it project_name ./manage.py collectstatic --noinput
 
 makemessages:

@@ -1,0 +1,7 @@
+-r requirements.txt  # Import all production dependencies
+django-debug-toolbar>=4.2  # Debugging tool
+pytest-django>=4.5  # Testing framework for Django
+coverage>=7.3  # Code coverage report
+flake8>=6.1  # Linter for code quality
+black>=23.3  # Code formatter
+ipython==8.12.3

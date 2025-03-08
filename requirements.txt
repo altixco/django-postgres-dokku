@@ -1,4 +1,6 @@
-Django==3.1.1
-gunicorn==19.9.0
-psycopg2==2.8.3
-dj_database_url
+Django>=5.0,<6.0  # Latest stable version of Django
+Pillow>=10.0  # Image processing library
+gunicorn>=21.2  # WSGI server for production
+psycopg2-binary>=2.9  # PostgreSQL adapter for Python
+dj-database-url>=2.0  # Database connection management
+
