@@ -36,3 +36,6 @@ makemessages:
 
 compilemessages:
 	docker exec -it project_name django-admin compilemessages
+
+loaddata-dev:
+	docker exec -it project_name ./manage.py loaddata initial dev

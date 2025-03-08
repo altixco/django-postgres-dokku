@@ -17,19 +17,21 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from main.urls import apiurls as main_apiurls
+from main.urls import apiurls as main_api_urls
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 
 # Create the API namespace and add the API only URLs of the applications
-apiurls = ([
-    path('main/', include(main_apiurls, namespace='main')),
+api_urls = ([
+    path('main/', include(main_api_urls, namespace='main')),
 ], 'api')
 
 urlpatterns = [
     path('', include('main.urls')),
-    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-    path('api/', include(apiurls, namespace='api')),
+    path('api/', include(api_urls, namespace='api')),
     path('admin/', admin.site.urls),
+    path('documentation/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('documentation/api/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
 ]
 
 if hasattr(settings, 'DEBUG_TOOLBAR') and settings.DEBUG_TOOLBAR:

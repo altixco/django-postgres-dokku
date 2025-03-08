@@ -9,6 +9,7 @@
 !.env.example
 *.mo
 temp.py
+project_name.log
 
 __pycache__
 MANIFEST

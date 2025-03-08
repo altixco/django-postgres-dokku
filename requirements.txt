@@ -4,5 +4,13 @@ gunicorn>=21.2  # WSGI server for production
 psycopg2-binary>=2.9  # PostgreSQL adapter for Python
 dj-database-url>=2.0  # Database connection management
 
-djangorestframework==3.12.1
-django-oauth-toolkit==1.3.2
+
+python-slugify==6.1.2
+django-colorfield==0.7.2
+django-filter==22.1
+django-tinymce==4.1.0
+
+drf-spectacular==0.28.0
+djangorestframework==3.15.2
+djangorestframework_simplejwt==5.5.0
+PyJWT==2.9.0
