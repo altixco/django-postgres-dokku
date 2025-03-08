@@ -5,7 +5,8 @@
 .tox/
 .DS_Store
 .idea/
-.env/
+.env
+!.env.example
 *.mo
 
 __pycache__
